@@ -10,7 +10,55 @@ import {
 import { skills } from '../data/resume';
 import SectionHeader from './SectionHeader';
 
+import {
+  Code,
+  Globe,
+  Cpu,
+  Layers
+} from 'lucide-react';
+
+import {
+  FaPhp,
+  FaLaravel,
+  FaReact,
+  FaStripe,
+  FaPaypal,
+  FaWhatsapp,
+} from 'react-icons/fa';
+
+import {
+  SiMysql,
+  SiNextdotjs,
+  SiRedis,
+  SiRazorpay,
+} from 'react-icons/si';
+
+import {
+  TbApi,
+  TbShieldLock,
+} from 'react-icons/tb';
+
+import { BiCoinStack } from 'react-icons/bi';
+
 const iconMap = { Server, Database, Plug, CreditCard, ShieldCheck, Zap };
+
+const techIcons = [
+  { icon: FaPhp, color: 'text-indigo-400', name: 'PHP' },
+  { icon: FaLaravel, color: 'text-red-500', name: 'Laravel' },
+  { icon: SiMysql, color: 'text-blue-500', name: 'MySQL' },
+  { icon: TbApi, color: 'text-cyan-400', name: 'REST API' },
+  { icon: TbShieldLock, color: 'text-orange-400', name: 'Sanctum' },
+  { icon: TbShieldLock, color: 'text-yellow-400', name: 'Passport' },
+  { icon: SiRazorpay, color: 'text-blue-400', name: 'Razorpay' },
+  { icon: FaStripe, color: 'text-violet-400', name: 'Stripe' },
+  { icon: FaPaypal, color: 'text-sky-400', name: 'PayPal' },
+  { icon: BiCoinStack, color: 'text-green-400', name: 'Spatie' },
+  { icon: Database, color: 'text-emerald-400', name: 'Eloquent' },
+  { icon: SiRedis, color: 'text-red-400', name: 'Redis' },
+  { icon: FaReact, color: 'text-cyan-300', name: 'React' },
+  // { icon: SiNextdotjs, color: 'text-white', name: 'Next.js' },
+  { icon: FaWhatsapp, color: 'text-green-500', name: 'WhatsApp API' },
+];
 
 const Skills = () => {
   return (
@@ -75,58 +123,36 @@ const Skills = () => {
         </div>
 
         {/* Tech marquee strip */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5 }}
-          className="mt-16 relative overflow-hidden glass-card py-6"
-        >
-          <div className="flex gap-12 animate-[marquee_25s_linear_infinite] whitespace-nowrap">
-            {[
-              'PHP',
-              'Laravel',
-              'MySQL',
-              'REST API',
-              'Sanctum',
-              'Passport',
-              'Razorpay',
-              'Stripe',
-              'PayPal',
-              'Spatie',
-              'Eloquent',
-              'Redis',
-              'React',
-              'Next.js',
-              'WhatsApp API',
-            ]
-              .concat([
-                'PHP',
-                'Laravel',
-                'MySQL',
-                'REST API',
-                'Sanctum',
-                'Passport',
-                'Razorpay',
-                'Stripe',
-                'PayPal',
-                'Spatie',
-                'Eloquent',
-                'Redis',
-                'React',
-                'Next.js',
-                'WhatsApp API',
-              ])
-              .map((t, i) => (
-                <span
+       
+     <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.5 }}
+         className="mt-16 relative overflow-hidden glass-card py-6">
+      <div className="overflow-hidden py-6">
+        <div className="flex w-max gap-16 marquee">
+
+         {[...techIcons, ...techIcons].map((item, i) => {
+           const Icon = item.icon;
+
+              return (
+                <div
                   key={i}
-                  className="text-2xl sm:text-3xl font-display font-bold text-gray-600 hover:text-cyan-400 transition-colors"
+                  className="flex shrink-0 items-center gap-3 group"
                 >
-                  {t}
-                </span>
-              ))}
+                  <Icon
+                    size={42}
+                    className={`${item.color} group-hover:scale-125 transition-all duration-300`}
+                  />
+
+                  <span className="text-gray-300 font-semibold text-lg">
+                    {item.name}
+                  </span>
+                </div>
+              );
+            })}
+
           </div>
-        </motion.div>
+        </div>
+       </motion.div>
+
       </div>
 
       <style>{`
@@ -135,6 +161,24 @@ const Skills = () => {
           100% { transform: translateX(-50%); }
         }
       `}</style>
+
+      <style>{`
+.marquee {
+  animation: marquee 25s linear infinite;
+  width: max-content;
+  will-change: transform;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+`}</style>
     </section>
   );
 };

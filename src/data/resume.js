@@ -85,7 +85,7 @@ export const projects = [
       'Real-time chatbot & appointment system',
       'Multi-tenant architecture',
     ],
-    tech: ['Laravel', 'Next.js', 'Stripe', 'Paystack', 'WhatsApp API'],
+    tech: ['Laravel','MySQL', 'Stripe','Sanctum','Paystack', 'WhatsApp API'],
     gradient: 'from-emerald-500 via-teal-500 to-cyan-500',
     accent: 'emerald',
   },
@@ -101,7 +101,7 @@ export const projects = [
       'Complex invoicing & delivery flows',
       'End-to-end data consistency',
     ],
-    tech: ['Laravel', 'MySQL', 'REST APIs', 'Eloquent'],
+    tech: ['Laravel', 'MySQL', 'REST APIs', 'Spatie','Passport'],
     gradient: 'from-blue-500 via-indigo-500 to-purple-500',
     accent: 'indigo',
   },
@@ -117,25 +117,26 @@ export const projects = [
       'Analytics & reporting dashboards',
       'User management system',
     ],
-    tech: ['Laravel', 'React', 'MySQL', 'Spatie', 'Chart.js'],
+    tech: ['Laravel', 'MySQL', 'Spatie', 'Chart.js','Sanctum'],
     gradient: 'from-fuchsia-500 via-pink-500 to-rose-500',
     accent: 'pink',
   },
 ];
 
 export const education = [
-  {
-    degree: 'Bachelor of Computer Applications',
-    status: 'Pursuing',
-    institute: 'Mohammad Hasan PG College, Jaunpur',
-    period: '2023 — Present',
-  },
-  {
+   {
     degree: 'Diploma in Computer Science & Engineering',
     status: 'Completed',
     institute: 'Prasad Polytechnic, Jaunpur',
     period: '2018 — 2021',
   },
+  {
+    degree: 'Bachelor of Computer Applications',
+    status: 'Completed',
+    institute: 'Mohammad Hasan PG College, Jaunpur',
+    period: '2023 — 2026',
+  },
+ 
 ];
 
 export const achievements = [
