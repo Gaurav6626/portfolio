@@ -19,7 +19,7 @@ const Footer = () => {
 
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
         <div className="flex items-center gap-2 text-gray-400">
-          <Code2 size={16} className="text-cyan-400" />
+          {/* <Code2 size={16} className="text-cyan-400" /> */}
           <span>
             Designed & built by{' '}
             <span className="text-white font-semibold">{profile.name}</span>

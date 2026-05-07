@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Code2 } from 'lucide-react';
 import { navLinks } from '../data/resume';
+import logo from '../assets/newlogo1.jpg';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -27,7 +28,7 @@ const Navbar = () => {
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
-
+ 
   return (
     <motion.header
       initial={{ y: -80, opacity: 0 }}
@@ -45,10 +46,12 @@ const Navbar = () => {
           whileHover={{ scale: 1.05 }}
           className="flex items-center gap-2 font-display font-bold text-xl"
         >
-          <span className="relative flex items-center justify-center w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-cyan-500 shadow-lg shadow-indigo-500/30">
+          {/* <span className="relative flex items-center justify-center w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-cyan-500 shadow-lg shadow-indigo-500/30">
             <Code2 size={20} className="text-white" />
-          </span>
-          <span className="gradient-text">Akash.dev</span>
+          </span> */}
+          <span className="gradient-text">Akash</span>
+  
+          {/* <img src={logo} alt="Akash Logo" className="w-25 h-20 object-contain gradient-text"/> */}
         </motion.a>
 
         {/* Desktop nav */}
