@@ -49,9 +49,8 @@ const Navbar = () => {
           {/* <span className="relative flex items-center justify-center w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-cyan-500 shadow-lg shadow-indigo-500/30">
             <Code2 size={20} className="text-white" />
           </span> */}
-          <span className="gradient-text">Akash</span>
+          <span className="gradient-text">Gaurav</span>
   
-          {/* <img src={logo} alt="Akash Logo" className="w-25 h-20 object-contain gradient-text"/> */}
         </motion.a>
 
         {/* Desktop nav */}

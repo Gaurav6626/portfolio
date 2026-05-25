@@ -180,15 +180,15 @@ const Hero = () => {
                   {'  '}
                   <span className="text-cyan-400">public</span>{' '}
                   <span className="text-purple-400">$name</span> ={' '}
-                  <span className="text-emerald-400">"Akash Yadav"</span>;{'\n'}
+                  <span className="text-emerald-400">"Gaurav Barnwal"</span>;{'\n'}
                   {'  '}
                   <span className="text-cyan-400">public</span>{' '}
                   <span className="text-purple-400">$role</span> ={' '}
-                  <span className="text-emerald-400">"Laravel Dev"</span>;{'\n'}
+                  <span className="text-emerald-400">"Laravel Developer"</span>;{'\n'}
                   {'  '}
                   <span className="text-cyan-400">public</span>{' '}
                   <span className="text-purple-400">$years</span> ={' '}
-                  <span className="text-orange-300">4</span>;{'\n\n'}
+                  <span className="text-orange-300">2</span>;{'\n\n'}
                   {'  '}
                   <span className="text-cyan-400">public function</span>{' '}
                   <span className="text-blue-300">build</span>(){' '}
@@ -224,7 +224,7 @@ const Hero = () => {
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
               className="absolute -top-4 -right-4 bg-gradient-to-br from-indigo-500 to-purple-600 px-4 py-2 rounded-xl shadow-xl shadow-indigo-500/30 text-white text-sm font-bold"
             >
-              4+ Years
+              2+ Years
             </motion.div>
             <motion.div
               animate={{ y: [0, 10, 0] }}

@@ -4,8 +4,8 @@ import { profile, achievements } from '../data/resume';
 import SectionHeader from './SectionHeader';
 
 const stats = [
-  { label: 'Years Experience', value: '4+', icon: Award, color: 'from-indigo-500 to-purple-500' },
-  { label: 'Projects Delivered', value: '10+', icon: Rocket, color: 'from-cyan-500 to-blue-500' },
+  { label: 'Years Experience', value: '2+', icon: Award, color: 'from-indigo-500 to-purple-500' },
+  { label: 'Projects Delivered', value: '3+', icon: Rocket, color: 'from-cyan-500 to-blue-500' },
   { label: 'Records Handled', value: '100k+', icon: Database, color: 'from-emerald-500 to-teal-500' },
   { label: 'Client Satisfaction', value: '100%', icon: TrendingUp, color: 'from-fuchsia-500 to-pink-500' },
 ];
